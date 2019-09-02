@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {App} from 'src/app/app'
 
 @Component({
   selector: 'app-job-entry',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./job-entry.component.css']
 })
 export class JobEntryComponent implements OnInit {
+  jobApp : App;
 
-  constructor() { }
+  constructor() { 
+    this.jobApp = new App()
+  }
 
   ngOnInit() {
   }
