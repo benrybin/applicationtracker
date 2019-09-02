@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {App} from 'src/app/app'
+import { JobService } from '../job.service';
 
 @Component({
   selector: 'app-job-entry',
@@ -9,11 +10,15 @@ import {App} from 'src/app/app'
 export class JobEntryComponent implements OnInit {
   jobApp : App;
 
-  constructor() { 
-    this.jobApp = new App()
+  constructor(private jobService: JobService) { this.jobApp = new App();
+    
   }
 
   ngOnInit() {
+    
+  }
+  onSubmit(){
+    this.jobService.addApplication(this.jobApp);
   }
 
 }

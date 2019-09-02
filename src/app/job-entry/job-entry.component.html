@@ -5,25 +5,25 @@
               <form (ngSubmit)="onSubmit()" #userForm="ngForm">
                 <div class="form-group">
                   <label for="Refernce Number">Refernce Number</label>
-                  <input type="text" [(ngModel)]="app.ref" 
+                  <input type="text" [(ngModel)]="jobApp.ref" 
                     class="form-control" id="name" name="name" placeholder="Enter Refernce Number Here"
                     required #title="ngModel">
                 </div>
                 
                 <div class="form-group">
                   <label for="Company Name">Company Name</label>
-                  <textarea rows="1" [(ngModel)]="app.companyName" class="form-control" id="postText" name="name" placeholder="Company Name"
+                  <textarea rows="1" [(ngModel)]="jobApp.companyName" class="form-control" id="postText" name="name" placeholder="Company Name"
                             required #postText="ngModel"></textarea>
                 </div>
                 <div class="form-group">
                   <label for="JobURL">Job Description Link</label>
-                  <input type="url" [(ngModel)]="app.linkjobdescrip"
+                  <input type="url" [(ngModel)]="jobApp.linkjobdescrip"
                          class="form-control" id="imageURL" name="imageURL" placeholder="Image"
                          required #imageURL="ngModel">
                 </div>
                 <div class="form-group">
                   <label for="Job Name">Job Name</label>
-                  <input type="text" [(ngModel)]="app.jobName"
+                  <input type="text" [(ngModel)]="jobApp.jobName"
                          class="form-control" id="tag" name="tag" placeholder="Tag"
                          required #tag="ngModel">
                 </div>
